@@ -6,12 +6,14 @@ const ProjetoSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Cliete'
     },
+    produto: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Produto'
+    },
     dataRegistro: {
         type: Date,
         default: new Date()
-    },
-    data: Date,
-    posicao: String
+    }
 })
 
 const Projeto = mongoose.model('Projeto', ProjetoSchema)

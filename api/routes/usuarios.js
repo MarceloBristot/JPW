@@ -6,6 +6,7 @@ router.use(express.json())
 router.get("/", function (req, res) {
     try {
         var limit = req.query.limit ? parseInt(req.query.limit) : 10
+        var filter = req.query.nome ? parseInt(req.query.limit) : 10
         Usuario.find(function (err, doc) {
             if (err) res.status(400).json({ err: "Erro ao consultar usuários!" })
             res.json(doc)
