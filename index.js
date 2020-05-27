@@ -12,9 +12,12 @@ const rotas = {
 app.use(cors())
 app.use('/clientes', rotas.clientes)
 app.use('/usuarios', rotas.usuarios)
-app.use('/usuarios', rotas.projetos)
-app.use('/usuarios', rotas.produtos)
-app.use('/usuarios', rotas.alteracoes)
+app.use('/projetos', rotas.projetos)
+app.use('/produtos', rotas.produtos)
+app.use('/alteracoes', rotas.alteracoes)
+
+app.set('token-auth-secret', 'CRVG');
+
 
 app.get('/', function (req, res) {
     res.send("Olá mundo! Este é o trabalho de JPW!")
