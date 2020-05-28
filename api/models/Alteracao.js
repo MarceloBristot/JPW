@@ -1,7 +1,6 @@
 const mongoose = require('../data')
 
 const AlteracaoSchema = new mongoose.Schema({
-    nome: String,
     projeto: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Projeto'

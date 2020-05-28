@@ -23,7 +23,7 @@ router.use(function (req, res, next) {
 router.get("/", async (req, res) => {
     try {
         var limit = req.query.limit ? parseInt(req.query.limit) : 10
-        var filter = req.query.nome ? { nome: req.query.nome } : {}
+        var filter = req.query.cidade ? { cidade: req.query.cidade } : {}
         var cliente = await (Cliente.find(filter).limit(limit))
         res.json(cliente)
     } catch (err) {
