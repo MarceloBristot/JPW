@@ -23,6 +23,6 @@ app.get('/', function (req, res) {
     res.send("Olá mundo! Este é o trabalho de JPW!")
 })
 
-app.listen(3000, function () {
-    console.log("Servidor rodando na porta 3000...")
+app.listen(1998, function () {
+    console.log("Servidor rodando na porta 1998...")
 })
